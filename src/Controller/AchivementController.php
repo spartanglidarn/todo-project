@@ -3,8 +3,9 @@ namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class AchivementController
+class AchivementController extends AbstractController
 {
     /**
      * @Route("/")
@@ -32,9 +33,9 @@ class AchivementController
             ],
         ];
 
-        return new Response(
-            '<html><body>List all goals on this page </body></html>' 
-        );
-
+        $test = 'testing 123';
+        return $this->render('achivement/list.html.twig',[
+            'test' => $test
+            ]);
     }
 }
