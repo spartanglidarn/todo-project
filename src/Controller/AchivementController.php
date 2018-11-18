@@ -32,10 +32,14 @@ class AchivementController extends AbstractController
                 ],
             ],
         ];
-
         $test = 'testing 123';
+        $test = phpinfo();
         return $this->render('achivement/list.html.twig',[
-            'test' => $test
+            'list' => $test
             ]);
+
+        // return new Response(
+        //     '<html><body>List all goals on this page </body></html>'
+        // );
     }
 }
