@@ -1,2 +1,6 @@
-/mysql/*
-/logs/*
+# exclude everything
+mysql/*
+logs/*
+# exception to the rule
+!mysql/.gitkeep
+!logs/.gitkeep
